@@ -43,8 +43,8 @@ export default function Login() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/85 to-primary-900/90"></div>
+      {/* Overlay with gradient - reduced opacity */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/40 via-gray-800/35 to-primary-900/40"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
