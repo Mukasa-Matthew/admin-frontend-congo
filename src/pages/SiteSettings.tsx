@@ -29,7 +29,9 @@ export default function SiteSettings() {
     onSuccess: (data) => {
       setSuccessMessage(data.message || 'Settings updated successfully!');
       setErrorMessage('');
+      // Invalidate both admin and public settings queries
       queryClient.invalidateQueries({ queryKey: ['site-settings'] });
+      queryClient.invalidateQueries({ queryKey: ['public-settings'] });
       setTimeout(() => setSuccessMessage(''), 5000);
     },
     onError: (error: any) => {
