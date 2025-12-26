@@ -12,6 +12,8 @@ import Tags from './pages/Tags';
 import Media from './pages/Media';
 import Comments from './pages/Comments';
 import Newsletter from './pages/Newsletter';
+import Settings from './pages/Settings';
+import SiteSettings from './pages/SiteSettings';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -115,6 +117,26 @@ function App() {
               <ProtectedRoute>
                 <Layout>
                   <Newsletter />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <Settings />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/site-settings"
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <SiteSettings />
                 </Layout>
               </ProtectedRoute>
             }

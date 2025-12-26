@@ -1,7 +1,8 @@
 import { api } from '../config/api';
 
 export interface LoginCredentials {
-  email: string;
+  email?: string;
+  username?: string;
   password: string;
 }
 
@@ -9,6 +10,7 @@ export interface LoginResponse {
   token: string;
   user: {
     id: number;
+    username: string | null;
     email: string;
     role: string;
   };
