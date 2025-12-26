@@ -9,7 +9,6 @@ import {
   MdCheckBox, 
   MdCheckBoxOutlineBlank,
   MdFilterList,
-  MdMoreVert,
   MdVisibility,
   MdSchedule
 } from 'react-icons/md';

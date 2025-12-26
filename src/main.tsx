@@ -6,7 +6,8 @@ import App from './App.tsx'
 // Global error handlers to prevent external scripts (browser extensions, etc.) from breaking the app
 window.addEventListener('error', (event) => {
   // Filter out errors from external scripts (browser extensions)
-  const errorSource = event.filename || event.target?.src || '';
+  const targetSrc = (event.target as HTMLImageElement | HTMLScriptElement)?.src || '';
+  const errorSource = event.filename || targetSrc || '';
   const errorMessage = event.message || '';
   const errorString = String(event.error || '');
   

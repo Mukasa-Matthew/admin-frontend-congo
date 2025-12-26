@@ -156,7 +156,7 @@ export default function ArticleForm() {
       
       // Load media items
       if (article.media && Array.isArray(article.media) && article.media.length > 0) {
-        setMediaItems(article.media.map((item, index) => ({
+        setMediaItems(article.media.map((item: { url: string; type?: 'image' | 'video'; order?: number }, index: number) => ({
           url: item.url,
           type: item.type || detectMediaType(item.url),
           order: item.order !== undefined ? item.order : index,

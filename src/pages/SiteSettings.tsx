@@ -5,10 +5,8 @@ import {
   MdSave, 
   MdCheckCircle, 
   MdError,
-  MdSettings as SettingsIcon,
   MdPublic,
   MdEmail,
-  MdPhone,
   MdLink,
   MdImage,
   MdDescription

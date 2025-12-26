@@ -6,6 +6,11 @@ export interface Article {
   excerpt: string;
   body: string;
   featured_image: string | null;
+  media?: Array<{
+    url: string;
+    type: 'image' | 'video';
+    order?: number;
+  }>;
   category_id: number | null;
   category_name?: string;
   tags?: string;
